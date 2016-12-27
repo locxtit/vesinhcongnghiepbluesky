@@ -1,0 +1,58 @@
+/*=======================   top bar ==========================*/
+
+#top {
+    overflow: auto;
+    width: 100%;
+}
+#carmd_topmenu {
+    clear: both;
+    overflow: auto;
+    float: right;
+    width: 100%;
+    text-align: right;
+    font-size: 18px;
+    padding-top: 35px;
+}
+#carmd_topmenu .x-navbar-inner {
+    min-height: inherit;
+}
+#carmd_topmenu ul {
+    list-style: none;
+    float: right;
+}
+#carmd_topmenu ul li {
+    float: left;
+    padding-right: 25px;
+}
+#carmd_topmenu a:hover {
+    text-decoration: underline;
+}
+#link-logout {
+    margin-left: 5px;
+    color: #fff;
+    background-color: #02a800;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border-top: 1px solid #02c300;
+}
+#link-logout:hover {
+    background-color: #008800;
+    text-decoration: none;
+}
+/*======================= menu bar ==========================*/
+
+.carmd-logout-item a {
+    color: #fff !important;
+    background: #02a800;
+    height: inherit !important;
+    padding: 12px 16px !important;
+    margin-top: 20px;
+    border-radius: 4px;
+    border-top: 1px solid #02c300;
+}
+.carmd-logout-item a:hover {
+    border: none !important;
+    box-shadow: none !important;
+    background: #027e00 !important;
+}
+/*======================= ??? ==========================*/

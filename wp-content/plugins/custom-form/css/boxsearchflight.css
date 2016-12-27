@@ -1,0 +1,38 @@
+  #frm-login {
+      margin: auto;
+      /*width: 580px;*/
+      text-align: center;
+  }
+  #frm-login label, #frm-login input, #frm-login button {
+      text-align: center;
+      display: block;
+  }
+  #frm-login button {
+      padding: 0.563em 0.6em 0.813em;
+      background: #E36A5C;
+      border: 1px solid #E36A5C;
+      margin: auto;
+  }
+  #frm-login button:hover {
+      background-color: #B0402B;
+      border-color: #B0402B;
+  }
+  #frm-login label {
+      margin-top: 15px;
+      color: #fff;
+  }
+  form textarea, form input[type="text"], form input[type="email"], form input[type="password"] {
+      width: 100%;
+  }
+  .error {
+      color: red !important;
+      /*background: #fff;*/
+      font-style: italic;
+  }
+  input.error {
+      border: 1px solid red;
+  }
+  .x-btn, .button, [type="submit"] {
+      -webkit-transition: all 0.15s linear;
+      transition: all 0.15s linear;
+  }
