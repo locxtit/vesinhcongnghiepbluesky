@@ -34,8 +34,8 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-define('WP_HOME', 'http://vesinhcongnghiepbluesky.com.vn'); // no trailing slash
-define('WP_SITEURL', 'http://vesinhcongnghiepbluesky.com.vn');  // no trailing slash
+define('WP_HOME', 'http://localhost:8088'); // no trailing slash
+define('WP_SITEURL', 'http://localhost:8088');  // no trailing slash
 
 define('WP_BACKEND_URL','http://localhost:8084');// backend url tms (source .net)
 define('WP_IS_TMS_SOURCE', false);

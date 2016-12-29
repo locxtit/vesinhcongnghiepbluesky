@@ -39,7 +39,7 @@
 			<?php the_excerpt(); ?>
 		</div>
 		<div class="read-btn">
-			<a class="btn-default-th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>"><?php _e('Đọc tiếp  ', 'ample') ?><i class="fa fa-angle-right"></i></a>
+			<a class="btn-default-th" href="<?php the_permalink(); ?>" title="<?php the_title_attribute();?>"><?php _e('Đọc tiếp  ', 'ample') ?><i class="fa fa-angle-double-right"></i></a>
 		</div>
    </div>
 

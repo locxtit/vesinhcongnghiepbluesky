@@ -1,7 +1,12 @@
 body{
 	background: url(http://flytrip.vn/wp-content/themes/vtrip/images/bg-body.png) repeat top left;
 }
-article.post{ clear: left;border-bottom: 1px solid #ddd; margin-bottom: 20px; padding-bottom: 5px !important; display: table;width:100%;}
+article.post{ 
+        clear: left;
+    padding-bottom: 0px !important;
+    display: table;
+    width: 100%;
+}
 article.post .post-featured-image{float:left; margin-right: 15px;}
 
 .header-post-title-container{background-image:url(images/bg-title.jpg)!important;}
@@ -57,9 +62,9 @@ article.post .post-featured-image{float:left; margin-right: 15px;}
 
 article.post .post-featured-image{max-width:200px;}
 
-.hentry .entry-title{font-size:18px !important;}
+.hentry .entry-title{font-size:14.5px !important;}
     
-.hentry .entry-title a{color: #035807!important;}
+.hentry .entry-title a{color: #444 !important;}
 .hentry .entry-title a:hover{text-decoration: underline;}
 
 .pagination{
@@ -103,26 +108,41 @@ article.post .post-featured-image{max-width:200px;}
 
 .widget.cat-post-widget{border:1px solid #ddd; padding: 15px;}
 .widget.cat-post-widget h3.widget-title{
-	margin: -15px;
+	margin: -16px;
     padding: 10px;
     border-bottom: 1px solid #ddd;
-    margin-bottom: 15px;
+    margin-bottom: 7px;
 	color:#035807 !important;
 	text-transform: uppercase;
 }
 
 /* .portfolio-container .tg-one-fourth .single-portfolio-thumbnail{width:250px; height: 250px;} */
 
-.widget.cat-post-widget h3.widget-title a{color:inherit}
-.widget.cat-post-widget .cat-post-item{min-height: 135px; max-height: 140px !important; overflow: hidden;}
+.widget.cat-post-widget h3.widget-title a{color:#fff;}
+.widget.cat-post-widget .cat-post-item{
+    min-height: 100px;
+    overflow: hidden;
+    padding: 3px 0 6px 0;
+}
+.widget.cat-post-widget .cat-post-item a.post-title {
+    float: right;
+    width: calc(100% - 115px);
+    padding-top: 5px;
+}
+.widget.cat-post-widget .cat-post-item a.cat-post-thumbnail {
+	float: left;
+}
 .widget.cat-post-widget .cat-post-item .cat-post-thumbnail{padding-bottom: 0 !important;}
 .widget.cat-post-widget .cat-post-item p{margin-left: 110px; margin-top: -115px; text-align: justify; font-size; 13px;}
 .widget.cat-post-widget .cat-post-item img{width: 100px; height: 100px;}
-
+#secondary .widget.cat-post-widget ul li.cat-post-item a {
+	color: #444;
+}
 .widget.cat-post-widget .cat-post-item .cat-post-title{
-	display: block !important; padding-bottom: 0px !important; color:#035807 !important;
-	color: #222c37 !important;
+	display: block !important; padding-bottom: 0px !important;
     font-weight: bold;
+    line-height: 20px;
+    text-transform: none !important;
 }
 
 .widget.cat-post-widget .cat-post-div-footer-link {
@@ -134,10 +154,10 @@ article.post .post-featured-image{max-width:200px;}
 }
 
 #primary{
-	width: 65% !important;
+	width: 73.5% !important;
 }
 #secondary{
-	width: 34% !important;
+	width: 25% !important;
 }
 
 .widget.cat-post-widget .cat-post-div-footer-link .cat-post-footer-link{
@@ -208,12 +228,14 @@ footer#colophon .inner-wrap{max-width: 1200px !important;}
 }
 .header-top{
 	padding: 10px 0;
-    /* height: 20px; */
-    background: rgb(43, 44, 44);
 	font-size: 15px;
 	text-align: right;
 	color: #ddd;
+    background: #fff;
 	
+}
+.header-top .inner-wrap {
+	position: relative;
 }
 .header-top strong{color: rgb(243, 88, 26); font-size: 18px;}
 .entry-content{line-height: 30px;}
@@ -270,7 +292,10 @@ footer#colophon .inner-wrap{max-width: 1200px !important;}
 
 .hentry .entry-title{padding-bottom: 5px !important;}
 
-#secondary .widget-title, #tertiary .widget-title{background:#ddd;}
+#secondary .widget-title, #tertiary .widget-title{background: #4caf50; color: #fff !important;}
+#secondary .widget-title, #tertiary .widget-title a {
+	color: #fff;
+}
 
 #colophon .widget{padding-bottom: 0 !important;}
 #colophon{padding-bottom: 0 !important;}
@@ -334,21 +359,27 @@ footer#colophon .inner-wrap{max-width: 1200px !important;}
 .main-navigation ul.menu li a{font-size: 16px !important;}
 
 .apss-social-share{
-	border: 1px #ddd dotted;
-    background: #eee;
-	margin-bottom: 20px;
-	margin-top: 20px;
+	border-top: 1px solid #4caf50;
+    padding: 10px 15px;
+    text-align: right;
+    font-weight: bold;
+    color: #4caf50;
+    font-size: 14px;
+    margin: -15px;
+    margin-top: 5px;
+    background: #f3fff4;
 }
 
 #post-contact{
 	padding: 10px 0;
     margin-top: 5px;
     border-top: 1px solid #4caf50;
+    display: none;
 }
 
 .business-template .widget.widget_call_to_action_block .call-to-action-content-wrapper >div {
-    background: rgba(0,0,0,.45);
-    padding: 100px 0;
+    background: rgba(0,0,0,0.1);
+    padding: 75px 0;
 }
 
 .wpcf7 .form-control{
@@ -366,6 +397,7 @@ footer#colophon .inner-wrap{max-width: 1200px !important;}
     border: 2px solid #4CAF50;
     outline: none;
     padding: 10px 39px;
+        margin-bottom: 0;
 }
 
 #right-promotion{
@@ -416,5 +448,40 @@ footer#colophon .inner-wrap{max-width: 1200px !important;}
 	article img{width: 98% !important;}
 	
 }
+a.cat-post-footer-link {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 10px 15px;
+    text-align: right;
+    font-weight: bold;
+    color: #4caf50;
+    font-size: 14px;
+    margin: -15px;
+    margin-top: 5px;
+    background: #f3fff4;
+}
+.hotline-header {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    width: 240px;
+}
 
+#menu-main-menu >li:nth-of-type(2) >ul {
+    min-width: 600px;
+    padding: 10px;
+}
+#menu-main-menu >li:nth-of-type(2) >ul >li {
+    width: 48%;
+    float: left;
+}
+#menu-main-menu >li:nth-of-type(2) >ul >li a {
+    padding: 7px 0px;
+}
+#menu-main-menu >li:nth-of-type(2) >ul >li:hover a {
+    padding: 7px 0 7px 7px;
+}
+#menu-main-menu >li:nth-of-type(2) >ul >li:nth-of-type(2n) {
+    float: right;
+}
 

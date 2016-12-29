@@ -54,7 +54,38 @@ var google_remarketing_only = false;
    
    <header id="masthead" class="site-header <?php echo $header_extra_class; ?>" role="banner">
 	   <div class="header-top">
-		   <div class="inner-wrap">
+		   <div class="inner-wrap clearfix">
+				<div id="header-left-section">
+				   <?php if( ( ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'both' || ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'logo_only' ) && ample_option( 'ample_header_logo_image', '' ) != '' ) { ?>
+
+					  <div id="header-logo-image">
+						 <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url(ample_option( 'ample_header_logo_image', '' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
+					  </div>
+				   <?php }
+
+				   $screen_reader = '';
+				   if ( ( ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'logo_only' || ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'none' ) ) {
+					  $screen_reader = 'screen-reader-text';
+				   }
+				   ?>
+				   <div id="header-text" class="<?php echo $screen_reader; ?>">
+				   <?php
+					  if ( is_front_page() || is_home() ) : ?>
+						 <h1 id="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						 </h1>
+					  <?php else : ?>
+						 <h3 id="site-title">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+						 </h3>
+					  <?php endif;
+					  $description = get_bloginfo( 'description', 'display' );
+					  if ( $description || is_customize_preview() ) : ?>
+						 <p id="site-description"><?php echo $description; ?></p>
+					  <?php endif;
+				   ?>
+				   </div>
+				</div><!-- #header-left-section -->
 				<?php echo wpcf_Bluesky_Header_Top(null); ?>
 		   </div>
 	   </div>
@@ -62,37 +93,6 @@ var google_remarketing_only = false;
          <?php if( ample_option( 'ample_header_image_position', 'above' ) == 'above' ) { ample_render_header_image(); } ?>
 
          <div class="main-head-wrap inner-wrap clearfix">
-            <div id="header-left-section">
-               <?php if( ( ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'both' || ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'logo_only' ) && ample_option( 'ample_header_logo_image', '' ) != '' ) { ?>
-
-                  <div id="header-logo-image">
-                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php echo esc_url(ample_option( 'ample_header_logo_image', '' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"></a>
-                  </div>
-               <?php }
-
-               $screen_reader = '';
-               if ( ( ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'logo_only' || ample_option( 'ample_show_header_logo_text', 'text_only' ) == 'none' ) ) {
-                  $screen_reader = 'screen-reader-text';
-               }
-               ?>
-               <div id="header-text" class="<?php echo $screen_reader; ?>">
-               <?php
-                  if ( is_front_page() || is_home() ) : ?>
-                     <h1 id="site-title">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                     </h1>
-                  <?php else : ?>
-                     <h3 id="site-title">
-                        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-                     </h3>
-                  <?php endif;
-                  $description = get_bloginfo( 'description', 'display' );
-                  if ( $description || is_customize_preview() ) : ?>
-                     <p id="site-description"><?php echo $description; ?></p>
-                  <?php endif;
-               ?>
-               </div>
-            </div><!-- #header-left-section -->
 
             <div id="header-right-section">
                <nav id="site-navigation" class="main-navigation" role="navigation">

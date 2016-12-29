@@ -589,9 +589,9 @@ class ample_featured_posts_widget extends WP_Widget {
          while( $get_featured_posts->have_posts() ):$get_featured_posts->the_post();
          ?>
             <?php
-            if ( $i % 2 == 0 ) { $class = 'tg-one-half tg-one-half-last'; }
+            if ( $i % 3 == 0 ) { $class = 'tg-one-half tg-one-half-last'; }
             else { $class = 'tg-one-half'; }
-            if( $i % 2 ==  1 && $i > 1) { $class .= ' tg-featured-posts-clearfix'; }
+            if( $i % 3 ==  1 && $i > 1) { $class .= ' tg-featured-posts-clearfix'; }
             ?>
             <div class="single-post <?php echo $class; ?>">
                <?php if( has_post_thumbnail() ) { ?>
