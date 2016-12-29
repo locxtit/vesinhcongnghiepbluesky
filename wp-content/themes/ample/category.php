@@ -13,7 +13,7 @@
 global $post;
 global $wp_query;
 get_header(); ?>
-	<div class="single-page clearfix">
+	<div class="single-page category-page clearfix">
       <div class="inner-wrap">
 		
          <div id="primary">
