@@ -9,7 +9,6 @@
 ?>
 <?php logo_slider(); ?>
       </div><!-- .main-wrapper -->
-		
       <footer id="colophon">
 		<div class="inner-wrap">
             <?php get_sidebar( 'footer' ); ?>
