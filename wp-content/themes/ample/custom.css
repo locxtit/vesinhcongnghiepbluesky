@@ -568,6 +568,24 @@ a.cat-post-footer-link {
     .moving-box a {
         font-size: 16px;
     }
+    #header-right-section {
+        height: 40px;
+        margin-bottom: -20px;
+    }
+    .menu-toggle:before {
+        top: 10px;
+    }
+    #header-right-section {
+        height: 40px !important;
+        margin-bottom: 00 !important;
+        box-shadow: none !important;
+    }
+    .main-head-wrap.inner-wrap.clearfix {
+        width: 100%;
+    }
+    .header-post-title-container {
+        padding-top: 25px !important;
+    }
 }
 @media screen and (max-width: 560px) {
     #header-logo-image img {
@@ -575,6 +593,10 @@ a.cat-post-footer-link {
     }
     .widget_featured_posts_block .single-post .entry-summary {
         display: none;
+    }
+    #header-right-section {
+        margin-bottom: 0;
+        box-shadow: none;
     }
 }
 @media screen and (max-width: 480px) {
